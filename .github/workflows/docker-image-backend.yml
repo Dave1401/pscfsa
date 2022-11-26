@@ -24,3 +24,4 @@ jobs:
           file: ./backend/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/test-backend-pscfsa:${{ github.event.label.name}}
+          context: .
