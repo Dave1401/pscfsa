@@ -15,9 +15,9 @@ patches:
 images:
 #backend image
 - name: daveke/backend-pe3
-  newName: daveke/backend-pe3
-  newTag: "0.3"
+  newName: daveke/test-backend-pscfsa
+  newTag: "0.1"
 #frontend image
 - name: daveke/frontend-pe3
-  newName: daveke/frontend-pe3
-  newTag: "0.3"
+  newName: daveke/test-frontend-pscfsa
+  newTag: "0.1"
