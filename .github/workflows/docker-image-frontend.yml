@@ -23,4 +23,4 @@ jobs:
         with:
           file: ./frontend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frontend-pe3:${{ github.event.label.name}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/test-frontend-pscfsa:${{ github.event.label.name}}
