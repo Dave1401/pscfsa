@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  template:
+    spec:
+      containers:
+        - name: react-frontend
+          image: daveke/frontend-pe3:0.2
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  template:
+    spec:
+      containers:
+        - name: flask-backend
+          image: daveke/backend-pe3:0.2

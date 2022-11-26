@@ -1,0 +1,9 @@
+resources:
+  #- 00_namespace.yaml
+  - backend.yaml
+  - configmaps.yaml
+  - database.yaml
+  - frontend.yaml
+  - ingress.yaml
+  - secrets.yaml
+  # dit bestand uitvoeren met: kubectl apply -k ./

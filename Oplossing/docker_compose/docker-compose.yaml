@@ -1,0 +1,25 @@
+version: "3"
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: bezkoder_db
+    ports:
+      - "27017:27017"
+
+  backend:
+    image: daveke/spring_boot_pe:0.15        
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+
+  frontend:
+    image: daveke/angular_pe:0.4
+    ports:
+      - "8181:80"
+      - "8081:8081"
+    depends_on:
+      - backend

@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../base
+
+commonAnnotations:
+  note: dit is een test-omgeving
+
+patches:
+  - memorylimit.yaml
+  #- images.yaml
+
+ 
+images:
+#backend image
+- name: daveke/backend-pe3
+  newName: daveke/backend-pe3
+  newTag: "0.3"
+#frontend image
+- name: daveke/frontend-pe3
+  newName: daveke/frontend-pe3
+  newTag: "0.3"

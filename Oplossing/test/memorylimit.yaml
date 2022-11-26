@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  template:
+    spec:
+      containers:
+        - name: react-frontend
+          resources:
+            limits:
+              memory: 1Gi
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  template:
+    spec:
+      containers:
+        - name: flask-backend
+          resources:
+            limits:
+              memory: 1Gi
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+    app: database
+spec:
+  template:
+    spec:
+      containers:
+        - name: postgres
+          resources:
+            limits:
+              memory: 1Gi
