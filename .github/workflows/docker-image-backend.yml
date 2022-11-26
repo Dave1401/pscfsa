@@ -24,4 +24,4 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/backend-pe3:${{ github.event.label.name}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/test-backend-pscfsa:${{ github.event.label.name}}
