@@ -16,8 +16,8 @@ images:
 #backend image
 - name: daveke/backend-pe3
   newName: daveke/test-backend-pscfsa
-  newTag: "0.5"
+  newTag: "1.0"
 #frontend image
 - name: daveke/frontend-pe3
   newName: daveke/test-frontend-pscfsa
-  newTag: "0.2"
+  newTag: "1.0"
